@@ -74,6 +74,108 @@
 					"uidString" : "tue35gLjDQCSgkhBBvFbkw=="
 				},
 				"code" : "workingDirectory := FileLocator temp resolve / 'Talos'.\r\tworkingDirectory exists ifTrue: [ workingDirectory deleteAll ].\r\r\tgitUrl := PureGitUrl with: 'git@github.com:siderolabs/talos.git'.\r\r\trepository := gitUrl cloneWithOwnerPrefixIn: workingDirectory.\r"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-11T12:23:57.909862+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-11T12:23:59.098637+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "fr7ZEgPjDQCTJht9BvFbkw=="
+				},
+				"code" : "IceGitCliPlatform current install"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-11T13:30:49.058894+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-11T14:42:07.686162+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "jgrvAQTjDQCTOZtsBvFbkw=="
+				},
+				"code" : "commits := repository  log toArray wait.\rgroups := Bag new.\rauthors := Bag new.\rcommits do: [:commit | \r\tgroups add: (( $: split: commit comment ) first).\r\tauthors add: commit author].\rmonthlyCommits := commits groupedBy: [:commit | commit timestamp printString first:7] "
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-11T13:50:12.65837+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2024-11-11T13:58:10.212311+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "BSRKRwTjDQCWhSpHBvFbkw=="
+				},
+				"code" : "groups add:(($: split: 'docs: add missing `--talosconfig` parameter to end of Hetzner guide\r\rAdds a missing `--talosconfig` parameter. Without it, talosctl would\rconnect to a local cluster which could confuse users following the\rguide.\r\rSigned-off-by: Variant9 <13605369+holly-hacker@users.noreply.github.com>\rSigned-off-by: Andrey Smirnov <andrey.smirnov@siderolabs.com>') first)"
 			}
 		]
 	},
